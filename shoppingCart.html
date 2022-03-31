@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        :root {
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --white: #FFFFFF;
+            --black: #000000;
+            --sm: 1.4rem;
+            --md: 1.6rem;
+            --lg: 1.8rem;
+        }
+
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Quicksand', sans-serif;
+
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        .product-detail {
+            width: 36rem;
+            padding: 2.4rem;
+            position: absolute;
+            box-sizing: border-box;
+            right: 0;
+        }
+
+        .product-detail-close {
+            background: var(--white);
+            width: 2.4rem;
+            height: 2.4rem;
+            position: absolute;
+            border-radius: 50%;
+            left: 1.2rem;
+            top: 1.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+        .primary-button {
+            background: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            height: 5rem;
+            margin-top: 2rem;
+
+        }
+        .title-container{
+            display: flex;
+            flex-direction: row;
+            padding: 2rem 2rem 2rem 0;
+        }
+        .return-icon{
+            width: 2rem;
+            height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            transform: rotate(180deg);
+        }
+
+        .title {
+            
+            font-size: var(--lg);
+            margin: 0;
+        }
+
+        .shopping-cart {
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            align-items: center;
+            margin-bottom: 2.4rem;
+        }
+
+        .shopping-cart figure {
+            margin: 0;
+        }
+
+        .shopping-cart figure img {
+            width: 7rem;
+            height: 7rem;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .shopping-cart span:nth-child(2) {
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            margin-left: 2rem;
+        }
+
+        .shopping-cart span:nth-child(3) {
+            font-size: var(--md);
+            font-weight: bold;
+            color: var(--black);
+            margin-right: 2rem;
+        }
+
+        .shopping-cart > img{
+            margin-right: 2rem;
+        }
+
+        .order {
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--text-input-field);
+            border-radius: 20px;
+            margin-bottom: 2rem;
+
+        }
+
+        .order p:nth-child(1) {
+            margin-left: 2rem;
+            font-size: var(--md);
+            font-weight: bold;
+            color: var(--black);
+        }
+
+
+        .order p:nth-child(2) {
+            font-size: var(--md);
+            margin-right: 2rem;
+            font-weight: bold;
+        }
+
+        .add-to-cart-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        @media (max-width:640px) {
+            .product-detail {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="product-detail">
+        <div class="title-container">
+            <div class="return-icon">
+                <img src="./icons/flechita.svg" alt="close">
+            </div>
+
+            <h1 class="title">Shopping cart</h1>
+        </div>
+        
+        <div class="my-order-content">
+
+
+
+            <div class="shopping-cart">
+                <figure>
+                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="bike">
+                </figure>
+
+                <span>
+                    Bike
+                </span>
+                <span>
+                    $30,00
+                </span>
+                <img src="./icons/icon_close.png" alt="close">
+        </div>
+
+        <div class="shopping-cart">
+            <figure>
+                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="bike">
+            </figure>
+
+            <span>
+                Bike
+            </span>
+            <span>
+                $30,00
+            </span>
+            <img src="./icons/icon_close.png" alt="close">
+    </div>
+
+    <div class="shopping-cart">
+        <figure>
+            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="bike">
+        </figure>
+
+        <span>
+            Bike
+        </span>
+        <span>
+            $30,00
+        </span>
+        <img src="./icons/icon_close.png" alt="close">
+</div>
+
+            <div class="order">
+                <p>Total</p>
+                <p>$560.00</p>
+            </div>
+
+            <button class="primary-button add-to-cart-button">
+                 <span>Checkout</span>
+            </button>
+    </aside>
+</body>
+
+</html>
